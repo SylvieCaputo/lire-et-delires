@@ -8,10 +8,16 @@ export default function Accueil() {
   return (
     <>
       <div className="cover">
+        <div className="ornement-cadre">
+          <span className="coin coin-tl"></span>
+          <span className="coin coin-tr"></span>
+          <span className="coin coin-bl"></span>
+          <span className="coin coin-br"></span>
+        </div>
         <h1 className="masthead">
-          Lire et
+          Sous la
           <br />
-          délire
+          couverture
         </h1>
         <p className="masthead-sub">on ne promet pas d&apos;être sage</p>
 
@@ -48,9 +54,9 @@ export default function Accueil() {
         </svg>
 
         <p className="cover-poeme">
-          Nuits blanches sous la couverture, à caresser des pages du
-          regard. À l&apos;aube, de toutes petites chroniques ébouriffées de
-          ces rencontres d&apos;un soir.
+          Nuits blanches à caresser des pages du regard. À l&apos;aube, de
+          toutes petites chroniques ébouriffées de ces rencontres
+          d&apos;un soir.
         </p>
       </div>
 

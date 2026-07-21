@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { articlesParRubrique } from "../../lib/contenu";
 
-export const metadata = { title: "Articles de réflexion — Lire et délire" };
+export const metadata = { title: "Articles de réflexion — Sous la couverture" };
 
 export default function Reflexion() {
   const liste = articlesParRubrique("reflexion");

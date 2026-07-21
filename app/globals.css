@@ -2,6 +2,7 @@
   --bg: #c8382e;
   --ink: #17110e;
   --cream: #f4ecda;
+  --cream-dore: #efdba3;
   --gold: #d9b36c;
 }
 
@@ -69,14 +70,53 @@ a {
   padding: 40px 34px 44px;
   position: relative;
 }
+.ornement-cadre {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1.5px solid var(--cream-dore);
+  pointer-events: none;
+}
+.coin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--cream-dore);
+}
+.coin-tl {
+  top: -6px;
+  left: -6px;
+  border-right: none;
+  border-bottom: none;
+}
+.coin-tr {
+  top: -6px;
+  right: -6px;
+  border-left: none;
+  border-bottom: none;
+}
+.coin-bl {
+  bottom: -6px;
+  left: -6px;
+  border-right: none;
+  border-top: none;
+}
+.coin-br {
+  bottom: -6px;
+  right: -6px;
+  border-left: none;
+  border-top: none;
+}
 .cover-poeme {
   text-align: center;
   font-family: "PT Serif", serif;
   font-style: italic;
   font-size: 15px;
   line-height: 1.6;
-  color: var(--cream);
-  opacity: 0.9;
+  color: var(--cream-dore);
+  opacity: 0.95;
   max-width: 380px;
   margin: 22px auto 0;
 }
@@ -88,7 +128,7 @@ h1.masthead {
   letter-spacing: 0.01em;
   line-height: 0.95;
   margin: 12px 0 0;
-  color: var(--cream);
+  color: var(--cream-dore);
 }
 .masthead-sub {
   text-align: center;
@@ -96,7 +136,7 @@ h1.masthead {
   font-style: italic;
   font-weight: 500;
   font-size: 15px;
-  color: var(--gold);
+  color: var(--cream-dore);
   margin: 8px 0 0;
   letter-spacing: 0.04em;
 }
