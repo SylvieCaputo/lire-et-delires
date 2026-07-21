@@ -66,60 +66,19 @@ a {
 /* Couverture façon magazine, page d'accueil uniquement */
 .cover {
   background: var(--bg);
-  padding: 28px 34px 34px;
+  padding: 40px 34px 44px;
   position: relative;
 }
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-family: "Archivo Narrow", sans-serif;
-}
-.kicker {
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--cream);
-  font-weight: 600;
-}
-.issue {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--cream);
-  text-align: right;
-  font-weight: 500;
-}
-.coverlines-left,
-.coverlines-right {
-  position: absolute;
-  top: 70px;
-  width: 150px;
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 11.5px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--cream);
-}
-.coverlines-left {
-  left: 34px;
-  text-align: left;
-}
-.coverlines-right {
-  right: 34px;
-  text-align: right;
-}
-.coverlines-left .big,
-.coverlines-right .big {
-  font-family: "Bodoni Moda", serif;
+.cover-poeme {
+  text-align: center;
+  font-family: "PT Serif", serif;
   font-style: italic;
-  font-weight: 600;
-  font-size: 17px;
-  display: block;
-  margin-bottom: 14px;
-  letter-spacing: 0;
-}
-.coverlines-left div,
-.coverlines-right div {
-  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cream);
+  opacity: 0.9;
+  max-width: 380px;
+  margin: 22px auto 0;
 }
 h1.masthead {
   text-align: center;
@@ -128,7 +87,7 @@ h1.masthead {
   font-size: 76px;
   letter-spacing: 0.01em;
   line-height: 0.95;
-  margin: 64px 0 0;
+  margin: 12px 0 0;
   color: var(--cream);
 }
 .masthead-sub {
@@ -144,15 +103,6 @@ h1.masthead {
 .stilllife {
   display: block;
   margin: 26px auto 0;
-}
-.coverline-bottom {
-  text-align: center;
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  color: var(--cream);
-  margin-top: 18px;
-  font-weight: 600;
 }
 
 /* Corps de page générique */

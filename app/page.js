@@ -8,30 +8,12 @@ export default function Accueil() {
   return (
     <>
       <div className="cover">
-        <div className="row">
-          <span className="kicker">livres · idées · pédagogie</span>
-          <span className="issue">N° 1 — ÉTÉ 2026</span>
-        </div>
-
-        <div className="coverlines-left">
-          <div>
-            <span className="big">la rentrée</span>12 essais qui vont compter
-          </div>
-          <div>ce que Calvino dit encore de nous</div>
-        </div>
-        <div className="coverlines-right">
-          <div>
-            <span className="big">grand format</span>l&apos;école face à l&apos;attention
-          </div>
-          <div>débat : l&apos;université américaine en crise</div>
-        </div>
-
         <h1 className="masthead">
           Lire et
           <br />
           délire
         </h1>
-        <p className="masthead-sub">un peu de sérieux, une pointe de folie</p>
+        <p className="masthead-sub">on ne promet pas d&apos;être sage</p>
 
         <svg
           className="stilllife"
@@ -65,8 +47,10 @@ export default function Accueil() {
           </g>
         </svg>
 
-        <p className="coverline-bottom">
-          la lettre du samedi — inscription en bas de page
+        <p className="cover-poeme">
+          Nuits blanches sous la couverture, à caresser des pages du
+          regard. À l&apos;aube, de toutes petites chroniques ébouriffées de
+          ces rencontres d&apos;un soir.
         </p>
       </div>
 
