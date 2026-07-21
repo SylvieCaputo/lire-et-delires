@@ -1,19 +1,18 @@
 "use client";
 
-// Remplace "TON-NOM-BUTTONDOWN" par ton identifiant Buttondown une fois le
-// compte créé (visible dans l'URL de ton formulaire d'inscription).
+// Identifiant Buttondown de Sylvie, utilisé dans les deux liens ci-dessous.
 export default function Newsletter() {
   return (
     <div className="newsletter">
       <h3>La lettre de Lire et délire</h3>
       <p>Un envoi, deux fois par mois, sans réclame ni bruit.</p>
       <form
-        action="https://buttondown.email/api/emails/embed-subscribe/TON-NOM-BUTTONDOWN"
+        action="https://buttondown.email/api/emails/embed-subscribe/sylvie-caputo"
         method="post"
         target="popupwindow"
         onSubmit={() =>
           window.open(
-            "https://buttondown.email/TON-NOM-BUTTONDOWN",
+            "https://buttondown.email/sylvie-caputo",
             "popupwindow"
           )
         }
