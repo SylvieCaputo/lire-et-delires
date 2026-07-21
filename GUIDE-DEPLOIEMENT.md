@@ -1,4 +1,4 @@
-# Guide de mise en ligne — Lire et délires
+# Guide de mise en ligne — Lire et délire
 
 Ce guide suppose que tu n'as jamais fait ça. Suis les étapes dans l'ordre,
 aucune ne nécessite d'installer quoi que ce soit sur ton ordinateur.

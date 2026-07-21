@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { articlesParRubrique } from "../../lib/contenu";
 
-export const metadata = { title: "Présentations d'ouvrages — Lire et délires" };
+export const metadata = { title: "Présentations d'ouvrages — Lire et délire" };
 
 export default function Livres() {
   const liste = articlesParRubrique("livres");

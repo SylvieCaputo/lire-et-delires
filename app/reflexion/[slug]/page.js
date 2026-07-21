@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleParSlug } from "../../../lib/contenu";
-import { incrementerVues } from "../../../lib/vues";
+import { lireVues } from "../../../lib/vues";
+import CompteurVues from "../../../components/CompteurVues";
 
 export const dynamic = "force-dynamic";
 
@@ -9,7 +10,7 @@ export default async function ArticleReflexion({ params }) {
   const article = articleParSlug(params.slug);
   if (!article || article.rubrique !== "reflexion") notFound();
 
-  const vues = await incrementerVues(article.slug);
+  const vues = await lireVues(article.slug);
 
   return (
     <div className="below">
@@ -21,7 +22,7 @@ export default async function ArticleReflexion({ params }) {
           month: "long",
           year: "numeric",
         })}{" "}
-        · {vues} lecture{vues > 1 ? "s" : ""}
+        · <CompteurVues slug={article.slug} initial={vues} />
       </p>
 
       <div className="article-body">

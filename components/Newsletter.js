@@ -5,7 +5,7 @@
 export default function Newsletter() {
   return (
     <div className="newsletter">
-      <h3>La lettre de Lire et délires</h3>
+      <h3>La lettre de Lire et délire</h3>
       <p>Un envoi, deux fois par mois, sans réclame ni bruit.</p>
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/TON-NOM-BUTTONDOWN"
