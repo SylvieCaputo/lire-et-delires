@@ -29,7 +29,7 @@ export default function Accueil() {
         <h1 className="masthead">
           Lire et
           <br />
-          délires
+          délire
         </h1>
         <p className="masthead-sub">un peu de sérieux, une pointe de folie</p>
 

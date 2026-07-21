@@ -2,7 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Lire et délires",
+  title: "Lire et délire",
   description:
     "Présentations d'ouvrages, essais et articles de réflexion sur la pédagogie et l'actualité intellectuelle.",
 };
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <nav className="nav">
           <div className="nav-inner">
             <Link href="/" className="nav-brand">
-              Lire et délires
+              Lire et délire
             </Link>
             <div className="nav-links">
               <Link href="/livres">Présentations d&apos;ouvrages</Link>
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         {children}
-        <footer className="footer">Lire et délires — Depuis 2026</footer>
+        <footer className="footer">Lire et délire — Depuis 2026</footer>
       </body>
     </html>
   );
