@@ -24,8 +24,9 @@ export default function RootLayout({ children }) {
               Sous la couverture
             </Link>
             <div className="nav-links">
-              <Link href="/livres">Présentations d&apos;ouvrages</Link>
-              <Link href="/reflexion">Articles de réflexion</Link>
+              <Link href="/livres">Liaisons dangereuses</Link>
+              <Link href="/reflexion">Remue méninges</Link>
+              <Link href="/aparte">En aparté</Link>
             </div>
           </div>
         </nav>

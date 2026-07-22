@@ -1,6 +1,20 @@
 import Link from "next/link";
 import Newsletter from "../components/Newsletter";
 import { tousLesArticles } from "../lib/contenu";
+import { rubriques } from "../lib/rubriques";
+import {
+  IconeLivres,
+  IconeReflexion,
+  IconeAparte,
+} from "../components/IconesRubriques";
+
+const iconesParRubrique = {
+  livres: IconeLivres,
+  reflexion: IconeReflexion,
+  aparte: IconeAparte,
+};
+
+export const dynamic = "force-dynamic";
 
 export default function Accueil() {
   const derniers = tousLesArticles().slice(0, 3);
@@ -54,37 +68,55 @@ export default function Accueil() {
         </svg>
 
         <p className="cover-poeme">
-          Nuits blanches à caresser des pages du regard. À l&apos;aube, de
-          toutes petites chroniques ébouriffées de ces rencontres
-          d&apos;un soir.
+          Nuits blanches à caresser des pages du regard.
+          <br />
+          À l&apos;aube, petites chroniques ébouriffées
+          <br />
+          de ces rencontres d&apos;un soir.
         </p>
       </div>
 
       <div className="below">
         <div className="sections">
-          <Link href="/livres" className="section-card">
-            <span className="ribbon">rubrique I</span>
-            <h2>Présentations d&apos;ouvrages</h2>
-            <p>Littérature et essais, en courtes fiches de lecture.</p>
+          <Link href={rubriques.livres.href} className="section-card">
+            <div className="icon-wrap">
+              <IconeLivres size={64} />
+            </div>
+            <h2>{rubriques.livres.titre}</h2>
+            <p>{rubriques.livres.sousTitre}</p>
           </Link>
-          <Link href="/reflexion" className="section-card">
-            <span className="ribbon">rubrique II</span>
-            <h2>Articles de réflexion</h2>
-            <p>Pédagogie et actualité intellectuelle, Europe et États-Unis.</p>
+          <Link href={rubriques.reflexion.href} className="section-card">
+            <div className="icon-wrap">
+              <IconeReflexion size={52} />
+            </div>
+            <h2>{rubriques.reflexion.titre}</h2>
+            <p>{rubriques.reflexion.sousTitre}</p>
+          </Link>
+          <Link href={rubriques.aparte.href} className="section-card">
+            <div className="icon-wrap">
+              <IconeAparte size={52} />
+            </div>
+            <h2>{rubriques.aparte.titre}</h2>
+            <p>{rubriques.aparte.sousTitre}</p>
           </Link>
         </div>
 
         <div className="articles">
-          {derniers.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/${article.rubrique}/${article.slug}`}
-              className="article-row"
-            >
-              <span className="tag">{article.tag}</span>
-              <span className="art-title">{article.titre}</span>
-            </Link>
-          ))}
+          {derniers.map((article) => {
+            const Icone = iconesParRubrique[article.rubrique];
+            return (
+              <Link
+                key={article.slug}
+                href={`/${article.rubrique}/${article.slug}`}
+                className="article-row"
+              >
+                <span className="tag-icon">
+                  <Icone size={26} />
+                </span>
+                <span className="art-title">{article.titre}</span>
+              </Link>
+            );
+          })}
         </div>
 
         <Newsletter />

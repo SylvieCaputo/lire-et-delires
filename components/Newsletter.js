@@ -4,8 +4,8 @@
 export default function Newsletter() {
   return (
     <div className="newsletter">
-      <h3>La lettre de Sous la couverture</h3>
-      <p>Un envoi, deux fois par mois, sans réclame ni bruit.</p>
+      <h3>Plus si affinités</h3>
+      <p className="newsletter-sub">la lettre mensuelle de Sous la couverture</p>
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/sylvie-caputo"
         method="post"
