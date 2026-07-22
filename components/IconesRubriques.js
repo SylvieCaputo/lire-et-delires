@@ -40,8 +40,8 @@ export function IconeLivres({ size = 52 }) {
           strokeWidth="0.9"
         />
       </g>
-      <path d="M44,30 L28,52" stroke="var(--bg)" strokeWidth="1.4" strokeLinecap="round" />
-      <circle cx="26.5" cy="54.5" r="2.2" fill="none" stroke="var(--bg)" strokeWidth="1.1" />
+      <path d="M17,26 L17,52" stroke="var(--bg)" strokeWidth="1.4" strokeLinecap="round" />
+      <circle cx="17" cy="54.5" r="2.2" fill="none" stroke="var(--bg)" strokeWidth="1.1" />
       <g transform="translate(52,-6) rotate(26)">
         <path
           d="M0,20 C-6,11 -5,-6 0,-22 C5,-6 6,11 0,20 Z"

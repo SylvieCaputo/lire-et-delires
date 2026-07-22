@@ -3,7 +3,7 @@ import { articlesParRubrique } from "../../lib/contenu";
 import { rubriques } from "../../lib/rubriques";
 import { IconeReflexion } from "../../components/IconesRubriques";
 
-export const metadata = { title: "Remue méninges — Sous la couverture" };
+export const metadata = { title: "Remue-méninges — Sous la couverture" };
 export const dynamic = "force-dynamic";
 
 export default function Reflexion() {

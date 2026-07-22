@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             </Link>
             <div className="nav-links">
               <Link href="/livres">Liaisons dangereuses</Link>
-              <Link href="/reflexion">Remue méninges</Link>
+              <Link href="/reflexion">Remue-méninges</Link>
               <Link href="/aparte">En aparté</Link>
             </div>
           </div>
