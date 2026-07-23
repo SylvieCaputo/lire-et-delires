@@ -321,10 +321,26 @@ h1.masthead {
   opacity: 0.6;
   margin-bottom: 28px;
 }
+.article-image {
+  display: block;
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 32px;
+  box-shadow: 0 8px 24px rgba(23, 17, 14, 0.18);
+}
 .article-body p {
   font-size: 17px;
   line-height: 1.75;
   margin: 0 0 20px;
+}
+.signature-article {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  opacity: 0.5;
+  margin: 8px 0 0;
 }
 .back-link {
   display: inline-block;

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { articleParSlug } from "../../../lib/contenu";
 import { lireVues } from "../../../lib/vues";
 import CompteurVues from "../../../components/CompteurVues";
+import SignatureArticle from "../../../components/SignatureArticle";
 
 export const dynamic = "force-dynamic";
 
@@ -25,11 +26,18 @@ export default async function ArticleReflexion({ params }) {
         · <CompteurVues slug={article.slug} initial={vues} />
       </p>
 
+      {article.image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={article.image} alt={article.titre} className="article-image" />
+      )}
+
       <div className="article-body">
         {article.contenu.map((paragraphe, i) => (
           <p key={i}>{paragraphe}</p>
         ))}
       </div>
+
+      <SignatureArticle />
 
       <Link href="/reflexion" className="back-link">
         ← Retour aux articles de réflexion
