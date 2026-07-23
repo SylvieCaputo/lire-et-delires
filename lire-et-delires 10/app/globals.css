@@ -1,0 +1,365 @@
+:root {
+  --bg: #c8382e;
+  --ink: #17110e;
+  --cream: #f4ecda;
+  --cream-dore: #efdba3;
+  --gold: #d9b36c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "PT Serif", serif;
+}
+
+a {
+  color: inherit;
+}
+
+.page-width {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Barre de navigation, présente sur toutes les pages */
+.nav {
+  background: var(--ink);
+  padding: 14px 24px;
+}
+.nav-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--cream);
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-decoration: none;
+  opacity: 0.85;
+}
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* Couverture façon magazine, page d'accueil uniquement */
+.cover {
+  background: var(--bg);
+  padding: 40px 34px 44px;
+  position: relative;
+}
+.ornement-cadre {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1.5px solid var(--cream-dore);
+  pointer-events: none;
+}
+.coin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--cream-dore);
+}
+.coin-tl {
+  top: -6px;
+  left: -6px;
+  border-right: none;
+  border-bottom: none;
+}
+.coin-tr {
+  top: -6px;
+  right: -6px;
+  border-left: none;
+  border-bottom: none;
+}
+.coin-bl {
+  bottom: -6px;
+  left: -6px;
+  border-right: none;
+  border-top: none;
+}
+.coin-br {
+  bottom: -6px;
+  right: -6px;
+  border-left: none;
+  border-top: none;
+}
+.cover-poeme {
+  text-align: center;
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cream-dore);
+  opacity: 0.95;
+  max-width: 380px;
+  margin: 22px auto 0;
+}
+h1.masthead {
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 800;
+  font-size: 76px;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  margin: 12px 0 0;
+  color: var(--cream-dore);
+}
+.masthead-sub {
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--cream-dore);
+  margin: 8px 0 0;
+  letter-spacing: 0.04em;
+}
+.stilllife {
+  display: block;
+  margin: 26px auto 0;
+}
+
+/* Corps de page générique */
+.below {
+  padding: 34px 24px 60px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 34px;
+  margin: 0 0 6px;
+}
+.page-lede {
+  font-size: 15px;
+  opacity: 0.75;
+  margin: 0 0 32px;
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+@media (max-width: 560px) {
+  .sections {
+    grid-template-columns: 1fr;
+  }
+}
+.section-card {
+  background: #fff;
+  box-shadow: 0 1px 0 var(--gold);
+  padding: 18px 14px;
+  text-align: center;
+  border-top: 3px solid var(--bg);
+  text-decoration: none;
+  display: block;
+}
+.icon-wrap {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.section-card h2 {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 19px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.section-card p {
+  font-size: 13px;
+  color: var(--ink);
+  opacity: 0.75;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.article-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.tag-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.article-row .art-title {
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+  color: var(--ink);
+  flex: 1;
+}
+.article-row .views {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  color: var(--ink);
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.newsletter {
+  background: var(--ink);
+  padding: 26px 28px;
+  text-align: center;
+}
+.newsletter h3 {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--gold);
+  margin: 0 0 4px;
+}
+.newsletter p.newsletter-sub {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.7;
+  margin: 0 0 14px;
+}
+.newsletter p {
+  font-size: 14px;
+  margin: 0 0 16px;
+  color: var(--cream);
+  opacity: 0.85;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.newsletter input[type="email"] {
+  font-family: "PT Serif", serif;
+  padding: 10px 14px;
+  border: none;
+  background: var(--cream);
+  width: 260px;
+  font-size: 14px;
+}
+.newsletter button {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 20px;
+  background: var(--bg);
+  color: var(--cream);
+  border: none;
+  cursor: pointer;
+}
+
+/* Page article */
+.article-tag {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--bg);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.article-title {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  margin: 10px 0 12px;
+  line-height: 1.15;
+}
+.article-meta {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 28px;
+}
+.article-image {
+  display: block;
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 32px;
+  box-shadow: 0 8px 24px rgba(23, 17, 14, 0.18);
+}
+.article-body p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+}
+.signature-article {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  opacity: 0.5;
+  margin: 8px 0 0;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 36px;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  background: var(--ink);
+}
