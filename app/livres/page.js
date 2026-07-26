@@ -3,7 +3,7 @@ import { articlesParRubrique } from "../../lib/contenu";
 import { rubriques } from "../../lib/rubriques";
 import { IconeLivres } from "../../components/IconesRubriques";
 
-export const metadata = { title: "Liaisons dangereuses — Sous la couverture" };
+export const metadata = { title: "Effeuillages — Sous la couverture" };
 export const dynamic = "force-dynamic";
 
 export default function Livres() {

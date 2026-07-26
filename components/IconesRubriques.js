@@ -114,58 +114,16 @@ export function IconeReflexion({ size = 52 }) {
 }
 
 export function IconeAparte({ size = 52 }) {
+  // Le papillon (palette + masque) est une image ; ratio largeur/hauteur ~1.64.
+  // On dimensionne par la largeur pour une présence comparable aux autres icônes.
+  const width = Math.round(size * 1.5);
   return (
-    <svg viewBox="0 0 60 60" width={size} height={size}>
-      <path d="M2,18 Q16,6 30,18 L30,24 Q16,14 2,24 Z" fill="var(--bg)" />
-      <path d="M30,18 Q44,6 58,18 L58,24 Q44,14 30,24 Z" fill="var(--bg)" />
-      <path d="M16,16 Q30,2 44,16 L44,22 Q30,10 16,22 Z" fill="var(--bg)" />
-      <g stroke="var(--gold)" strokeWidth="0.6">
-        <line x1="4" y1="22" x2="4" y2="24.5" />
-        <line x1="7" y1="18.5" x2="7" y2="21" />
-        <line x1="10" y1="16" x2="10" y2="18.5" />
-        <line x1="13" y1="14.5" x2="13" y2="17" />
-        <line x1="16" y1="13.5" x2="16" y2="16" />
-        <line x1="19" y1="14.5" x2="19" y2="17" />
-        <line x1="22" y1="16" x2="22" y2="18.5" />
-        <line x1="25" y1="18.5" x2="25" y2="21" />
-        <line x1="28" y1="22" x2="28" y2="24.5" />
-        <line x1="32" y1="22" x2="32" y2="24.5" />
-        <line x1="35" y1="18.5" x2="35" y2="21" />
-        <line x1="38" y1="16" x2="38" y2="18.5" />
-        <line x1="41" y1="14.5" x2="41" y2="17" />
-        <line x1="44" y1="13.5" x2="44" y2="16" />
-        <line x1="47" y1="14.5" x2="47" y2="17" />
-        <line x1="50" y1="16" x2="50" y2="18.5" />
-        <line x1="53" y1="18.5" x2="53" y2="21" />
-        <line x1="56" y1="22" x2="56" y2="24.5" />
-        <line x1="18" y1="20" x2="18" y2="22.5" />
-        <line x1="21" y1="16.5" x2="21" y2="19" />
-        <line x1="24" y1="14" x2="24" y2="16.5" />
-        <line x1="27" y1="12.5" x2="27" y2="15" />
-        <line x1="30" y1="11.5" x2="30" y2="14" />
-        <line x1="33" y1="12.5" x2="33" y2="15" />
-        <line x1="36" y1="14" x2="36" y2="16.5" />
-        <line x1="39" y1="16.5" x2="39" y2="19" />
-        <line x1="42" y1="20" x2="42" y2="22.5" />
-      </g>
-      <path d="M3,22 C1,32 1,44 3,56 L26,56 C24,44 24,32 26,22 Z" fill="var(--bg)" />
-      <path d="M34,22 C32,32 32,44 34,56 L57,56 C59,44 59,32 57,22 Z" fill="var(--bg)" />
-      <g stroke="#8b2318" strokeWidth="1" opacity="0.8">
-        <path d="M8,23 C6,33 6,45 8,55" fill="none" />
-        <path d="M14,22 C12,33 12,46 14,56" fill="none" />
-        <path d="M20,22 C19,33 19,46 20,56" fill="none" />
-        <path d="M40,22 C41,33 41,46 40,56" fill="none" />
-        <path d="M46,22 C48,33 48,46 46,56" fill="none" />
-        <path d="M52,23 C54,33 54,45 52,55" fill="none" />
-      </g>
-      <g stroke="var(--gold)" strokeWidth="0.5" opacity="0.6">
-        <path d="M11,22.5 C9,33 9,45 11,55.5" fill="none" />
-        <path d="M23,21.5 C22,33 22,46 23,56" fill="none" />
-        <path d="M37,21.5 C38,33 38,46 37,56" fill="none" />
-        <path d="M49,22.5 C51,33 51,45 49,55.5" fill="none" />
-      </g>
-      <path d="M27,3 Q30,0 33,3 Q30,5 27,3 Z" fill="var(--gold)" />
-      <path d="M30,3 L30,8" stroke="var(--gold)" strokeWidth="0.7" />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/rubriques/papillon-extases.png"
+      alt="Extases"
+      width={width}
+      style={{ height: "auto", display: "block" }}
+    />
   );
 }

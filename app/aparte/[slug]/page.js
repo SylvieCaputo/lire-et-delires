@@ -40,7 +40,7 @@ export default async function ArticleAparte({ params }) {
       <SignatureArticle />
 
       <Link href="/aparte" className="back-link">
-        ← Retour à En aparté
+        ← Retour aux Extases
       </Link>
     </div>
   );

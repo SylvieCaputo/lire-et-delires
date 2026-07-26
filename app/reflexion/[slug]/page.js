@@ -40,7 +40,7 @@ export default async function ArticleReflexion({ params }) {
       <SignatureArticle />
 
       <Link href="/reflexion" className="back-link">
-        ← Retour aux articles de réflexion
+        ← Retour aux Effronteries
       </Link>
     </div>
   );

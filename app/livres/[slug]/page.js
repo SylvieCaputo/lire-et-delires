@@ -40,7 +40,7 @@ export default async function ArticleLivre({ params }) {
       <SignatureArticle />
 
       <Link href="/livres" className="back-link">
-        ← Retour aux Liaisons dangereuses
+        ← Retour aux Effeuillages
       </Link>
     </div>
   );

@@ -356,10 +356,31 @@ h1.masthead {
 
 .footer {
   text-align: center;
-  padding: 24px;
+  padding: 28px 24px;
+  background: var(--ink);
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--cream-dore);
+  text-decoration: none;
+}
+.contact-link:hover {
+  text-decoration: underline;
+}
+.enveloppe {
+  color: var(--cream-dore);
+  flex-shrink: 0;
+}
+.footer-signature {
   font-family: "Archivo Narrow", sans-serif;
   font-size: 10px;
   letter-spacing: 0.2em;
   color: var(--gold);
-  background: var(--ink);
+  opacity: 0.7;
+  margin: 12px 0 0;
 }

@@ -3,7 +3,7 @@ import { articlesParRubrique } from "../../lib/contenu";
 import { rubriques } from "../../lib/rubriques";
 import { IconeAparte } from "../../components/IconesRubriques";
 
-export const metadata = { title: "En aparté — Sous la couverture" };
+export const metadata = { title: "Extases — Sous la couverture" };
 export const dynamic = "force-dynamic";
 
 export default function Aparte() {
