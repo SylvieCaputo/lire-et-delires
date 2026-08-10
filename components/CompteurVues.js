@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { T } from "../lib/traductions";
 
-export default function CompteurVues({ slug, initial }) {
+export default function CompteurVues({ slug, initial, langue = "fr" }) {
   const [vues, setVues] = useState(initial);
 
   useEffect(() => {
@@ -20,9 +21,10 @@ export default function CompteurVues({ slug, initial }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
+  const mots = T[langue].lecture;
   return (
     <>
-      {vues} lecture{vues > 1 ? "s" : ""}
+      {vues} {vues > 1 ? mots[1] : mots[0]}
     </>
   );
 }

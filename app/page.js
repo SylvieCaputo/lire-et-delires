@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Newsletter from "../components/Newsletter";
-import { tousLesArticles } from "../lib/contenu";
-import { rubriques } from "../lib/rubriques";
+import { tousLesArticles, champ } from "../lib/contenu";
+import { T } from "../lib/traductions";
+import { getLangue } from "../lib/langueServeur";
 import {
   IconeLivres,
   IconeReflexion,
@@ -17,6 +18,8 @@ const iconesParRubrique = {
 export const dynamic = "force-dynamic";
 
 export default function Accueil() {
+  const langue = getLangue();
+  const tr = T[langue];
   const derniers = tousLesArticles().slice(0, 3);
 
   return (
@@ -104,8 +107,8 @@ export default function Accueil() {
       </div>
 
       <div className="cover-inner">
-      <h1 className="masthead">Sous la<br />couverture</h1>
-      <p className="masthead-sub">on ne promet pas d&apos;être sage</p>
+      <h1 className="masthead">{tr.masthead[0]}<br />{tr.masthead[1]}</h1>
+      <p className="masthead-sub">{tr.sousTitreCouverture}</p>
       <div className="filet"><span className="trait"></span><span className="diamant"></span><span className="trait right"></span></div>
       </div>
 
@@ -203,33 +206,33 @@ export default function Accueil() {
       <path d="M250,40 L251.1,42.9 L254,44 L251.1,45.1 L250,48 L248.9,45.1 L246,44 L248.9,42.9 Z" opacity="0.5"/>
       </g>
       </svg>
-      <p className="cover-poeme">— Nuits blanches à caresser des pages du regard —<br />À l&apos;aube, petites chroniques ébouriffées<br />de ces rencontres d&apos;un soir</p>
+      <p className="cover-poeme">{tr.poeme[0]}<br />{tr.poeme[1]}<br />{tr.poeme[2]}</p>
       </div>
       </div>
 
 
       <div className="below">
         <div className="sections">
-          <Link href={rubriques.livres.href} className="section-card">
+          <Link href="/livres" className="section-card">
             <div className="icon-wrap">
               <IconeLivres size={72} />
             </div>
-            <h2>{rubriques.livres.titre}</h2>
-            <p>{rubriques.livres.sousTitre}</p>
+            <h2>{tr.rubriques.livres.titre}</h2>
+            <p>{tr.rubriques.livres.sousTitre}</p>
           </Link>
-          <Link href={rubriques.reflexion.href} className="section-card">
+          <Link href="/reflexion" className="section-card">
             <div className="icon-wrap">
               <IconeReflexion size={60} />
             </div>
-            <h2>{rubriques.reflexion.titre}</h2>
-            <p>{rubriques.reflexion.sousTitre}</p>
+            <h2>{tr.rubriques.reflexion.titre}</h2>
+            <p>{tr.rubriques.reflexion.sousTitre}</p>
           </Link>
-          <Link href={rubriques.aparte.href} className="section-card">
+          <Link href="/aparte" className="section-card">
             <div className="icon-wrap">
               <IconeAparte size={43} />
             </div>
-            <h2>{rubriques.aparte.titre}</h2>
-            <p>{rubriques.aparte.sousTitre}</p>
+            <h2>{tr.rubriques.aparte.titre}</h2>
+            <p>{tr.rubriques.aparte.sousTitre}</p>
           </Link>
         </div>
 
@@ -245,13 +248,13 @@ export default function Accueil() {
                 <span className="tag-icon">
                   <Icone size={26} />
                 </span>
-                <span className="art-title">{article.titre}</span>
+                <span className="art-title">{champ(article.titre, langue)}</span>
               </Link>
             );
           })}
         </div>
 
-        <Newsletter />
+        <Newsletter langue={langue} />
       </div>
     </>
   );

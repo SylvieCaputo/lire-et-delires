@@ -1,18 +1,20 @@
 import Link from "next/link";
-import { articlesParRubrique } from "../../lib/contenu";
-import { rubriques } from "../../lib/rubriques";
+import { articlesParRubrique, champ } from "../../lib/contenu";
+import { T } from "../../lib/traductions";
+import { getLangue } from "../../lib/langueServeur";
 import { IconeAparte } from "../../components/IconesRubriques";
 
-export const metadata = { title: "Extases — Sous la couverture" };
 export const dynamic = "force-dynamic";
 
-export default function Aparte() {
+export default function Rubrique() {
+  const langue = getLangue();
+  const r = T[langue].rubriques.aparte;
   const liste = articlesParRubrique("aparte");
 
   return (
     <div className="below">
-      <h1 className="page-title">{rubriques.aparte.titre}</h1>
-      <p className="page-lede">{rubriques.aparte.sousTitre}</p>
+      <h1 className="page-title">{r.titre}</h1>
+      <p className="page-lede">{r.sousTitre}</p>
 
       <div className="articles">
         {liste.map((article) => (
@@ -24,7 +26,7 @@ export default function Aparte() {
             <span className="tag-icon">
               <IconeAparte size={26} />
             </span>
-            <span className="art-title">{article.titre}</span>
+            <span className="art-title">{champ(article.titre, langue)}</span>
           </Link>
         ))}
       </div>

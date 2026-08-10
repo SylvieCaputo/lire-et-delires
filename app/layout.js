@@ -1,5 +1,8 @@
 import "./globals.css";
 import Link from "next/link";
+import { T } from "../lib/traductions";
+import { getLangue } from "../lib/langueServeur";
+import LangSwitcher from "../components/LangSwitcher";
 
 export const metadata = {
   title: "Sous la couverture",
@@ -8,8 +11,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const langue = getLangue();
+  const tr = T[langue];
+
   return (
-    <html lang="fr">
+    <html lang={langue}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -21,12 +27,13 @@ export default function RootLayout({ children }) {
         <nav className="nav">
           <div className="nav-inner">
             <Link href="/" className="nav-brand">
-              Sous la couverture
+              {tr.nomSite}
             </Link>
             <div className="nav-links">
-              <Link href="/livres">Effeuillages</Link>
-              <Link href="/reflexion">Effronteries</Link>
-              <Link href="/aparte">Extases</Link>
+              <Link href="/livres">{tr.rubriques.livres.titre}</Link>
+              <Link href="/reflexion">{tr.rubriques.reflexion.titre}</Link>
+              <Link href="/aparte">{tr.rubriques.aparte.titre}</Link>
+              <LangSwitcher courante={langue} />
             </div>
           </div>
         </nav>
@@ -37,9 +44,11 @@ export default function RootLayout({ children }) {
               <rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
               <path d="M3,6.5 L12,13 L21,6.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
-            Liaisons dangereuses
+            {tr.contact}
           </a>
-          <p className="footer-signature">Sous la couverture — Depuis 2026</p>
+          <p className="footer-signature">
+            {tr.nomSite} — {tr.signaturePied}
+          </p>
         </footer>
       </body>
     </html>

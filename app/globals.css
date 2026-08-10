@@ -504,3 +504,30 @@ h1.masthead {
   opacity: 0.7;
   margin: 12px 0 0;
 }
+
+/* Sélecteur de langue (dans la navigation) */
+.lang-switcher {
+  display: inline-flex;
+  gap: 1px;
+  margin-left: 14px;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.lang-btn:hover {
+  opacity: 0.85;
+}
+.lang-btn.actif {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
