@@ -39,7 +39,12 @@ export default function RootLayout({ children }) {
         </nav>
         {children}
         <footer className="footer">
-          <a className="contact-link" href="#">
+          <a
+            className="contact-link"
+            href={`mailto:souslacouverture@yahoo.com?subject=${encodeURIComponent(
+              "Contact — " + tr.nomSite
+            )}`}
+          >
             <svg className="enveloppe" viewBox="0 0 24 24" width="16" height="16">
               <rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
               <path d="M3,6.5 L12,13 L21,6.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
