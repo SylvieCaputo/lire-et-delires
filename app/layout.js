@@ -22,6 +22,12 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Archivo+Narrow:wght@500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Sous la couverture"
+          href="/rss.xml"
+        />
       </head>
       <body>
         <nav className="nav">
