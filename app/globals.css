@@ -532,14 +532,12 @@ h1.masthead {
   text-underline-offset: 3px;
 }
 
-
 /* ============================================================
-   REFONTE GRAPHIQUE (appliquée le 2026-08-14) — égaie la présentation
-   sans changer le concept. La couverture et la newsletter ne sont PAS
-   modifiées ci-dessous (elles gardent leur mise en page d'origine).
+   REFONTE GRAPHIQUE (appliquee le 2026-08-14) — egaie la presentation
+   sans changer le concept. Serrures a TETE RONDE + PIED large triangulaire,
+   icones a taille normale. Couverture et newsletter NON modifiees.
    ============================================================ */
 
-/* Fond plus chaleureux et doucement texturé */
 body {
   background:
     radial-gradient(1100px 460px at 50% -60px, #fdf8ec 0%, rgba(253,248,236,0) 72%),
@@ -547,7 +545,6 @@ body {
   background-attachment: fixed;
 }
 
-/* Cartes de rubrique : filet doré en haut, icône en serrure ambrée, titre rouge */
 .below .sections { display: flex; gap: 16px; align-items: stretch; }
 .below .sections .section-card {
   flex: 1; --accent: #c8382e;
@@ -566,18 +563,15 @@ body {
   transform: translateY(-4px); box-shadow: 0 14px 30px rgba(42,32,24,0.17);
 }
 .below .sections .section-card .icon-wrap {
-  width: 84px; height: 154px; margin: 2px auto 8px;
-  padding-bottom: 62px;
+  width: 98px; height: 152px; margin: 2px auto 8px;
+  padding-bottom: 48px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 0; box-shadow: none;
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4NCAxNTQiPjxwYXRoIGQ9Ik0zMCw4Ny42IEEzNyw0NCAwIDEgMSA1NCw4Ny42IEw2MSwxNTAgTDIzLDE1MCBaIiBmaWxsPSIjZjNlYWQzIiBzdHJva2U9IiNjNzlhNTQiIHN0cm9rZS13aWR0aD0iMS42Ii8+PC9zdmc+') no-repeat center / contain;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5OCAxNTIiPjxwYXRoIGQ9Ik00MCw5NiBBNDgsNDggMCAxIDEgNTgsOTYgTDcwLDE1MCBMMjgsMTUwIFoiIGZpbGw9IiNmM2VhZDMiIHN0cm9rZT0iI2M3OWE1NCIgc3Ryb2tlLXdpZHRoPSIxLjYiLz48L3N2Zz4=') no-repeat center / contain;
 }
-.below .sections .section-card .icon-wrap svg,
-.below .sections .section-card .icon-wrap img { transform: scale(0.72); }
 .below .sections .section-card h2 { color: var(--accent); }
 @media (max-width: 560px){ .below .sections { flex-direction: column; } }
 
-/* Liste d'articles : petites cartes vivantes + ornement doré */
 .below .articles::before {
   content:"\25C6 \25C6 \25C6"; display:block; text-align:center;
   color: var(--gold); font-size: 11px; letter-spacing: 8px; margin: 2px 0 18px;
