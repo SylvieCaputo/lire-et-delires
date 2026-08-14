@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Newsletter from "../components/Newsletter";
 import { tousLesArticles, champ } from "../lib/contenu";
+import { avecItalique } from "../lib/titre";
 import { T } from "../lib/traductions";
 import { getLangue } from "../lib/langueServeur";
 import {
@@ -248,7 +249,7 @@ export default function Accueil() {
                 <span className="tag-icon">
                   <Icone size={26} />
                 </span>
-                <span className="art-title">{champ(article.titre, langue)}</span>
+                <span className="art-title">{avecItalique(champ(article.titre, langue), champ(article.titreItalique, langue))}</span>
               </Link>
             );
           })}

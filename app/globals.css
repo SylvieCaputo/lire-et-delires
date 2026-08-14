@@ -556,8 +556,8 @@ body {
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .below .sections .section-card::after {
-  content:""; position:absolute; top: 8px; left: 10px; right: 10px;
-  height: 0; border-top: 1px solid var(--gold); background: transparent;
+  content:""; position:absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--bg);
 }
 .below .sections .section-card:hover {
   transform: translateY(-4px); box-shadow: 0 14px 30px rgba(42,32,24,0.17);

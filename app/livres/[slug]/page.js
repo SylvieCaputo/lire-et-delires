@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleParSlug, champ } from "../../../lib/contenu";
+import { avecItalique } from "../../../lib/titre";
 import { lireVues } from "../../../lib/vues";
 import { T } from "../../../lib/traductions";
 import { getLangue } from "../../../lib/langueServeur";
@@ -21,7 +22,7 @@ export default async function Article({ params }) {
   return (
     <div className="below">
       <span className="article-tag">{tr.rubriques.livres.titre}</span>
-      <h1 className="article-title">{titre}</h1>
+      <h1 className="article-title">{avecItalique(titre, champ(article.titreItalique, langue))}</h1>
       <p className="article-meta">
         {new Date(article.date).toLocaleDateString(tr.dateLocale, {
           day: "numeric",

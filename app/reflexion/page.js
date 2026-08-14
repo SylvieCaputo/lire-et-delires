@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { articlesParRubrique, champ } from "../../lib/contenu";
+import { avecItalique } from "../../lib/titre";
 import { T } from "../../lib/traductions";
 import { getLangue } from "../../lib/langueServeur";
 import { IconeReflexion } from "../../components/IconesRubriques";
@@ -26,7 +27,7 @@ export default function Rubrique() {
             <span className="tag-icon">
               <IconeReflexion size={26} />
             </span>
-            <span className="art-title">{champ(article.titre, langue)}</span>
+            <span className="art-title">{avecItalique(champ(article.titre, langue), champ(article.titreItalique, langue))}</span>
           </Link>
         ))}
       </div>
