@@ -531,3 +531,67 @@ h1.masthead {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+
+/* ============================================================
+   REFONTE GRAPHIQUE (appliquée le 2026-08-14) — égaie la présentation
+   sans changer le concept. La couverture et la newsletter ne sont PAS
+   modifiées ci-dessous (elles gardent leur mise en page d'origine).
+   ============================================================ */
+
+/* Fond plus chaleureux et doucement texturé */
+body {
+  background:
+    radial-gradient(1100px 460px at 50% -60px, #fdf8ec 0%, rgba(253,248,236,0) 72%),
+    linear-gradient(180deg, #f7f0de 0%, #f2e7cf 100%);
+  background-attachment: fixed;
+}
+
+/* Cartes de rubrique : filet doré en haut, icône en serrure ambrée, titre rouge */
+.below .sections { display: flex; gap: 16px; align-items: stretch; }
+.below .sections .section-card {
+  flex: 1; --accent: #c8382e;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(199,154,84,0.5);
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(42,32,24,0.09);
+  padding: 30px 14px 20px; overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.below .sections .section-card::after {
+  content:""; position:absolute; top: 8px; left: 10px; right: 10px;
+  height: 0; border-top: 1px solid var(--gold); background: transparent;
+}
+.below .sections .section-card:hover {
+  transform: translateY(-4px); box-shadow: 0 14px 30px rgba(42,32,24,0.17);
+}
+.below .sections .section-card .icon-wrap {
+  width: 84px; height: 154px; margin: 2px auto 8px;
+  padding-bottom: 62px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 0; box-shadow: none;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4NCAxNTQiPjxwYXRoIGQ9Ik0zMCw4Ny42IEEzNyw0NCAwIDEgMSA1NCw4Ny42IEw2MSwxNTAgTDIzLDE1MCBaIiBmaWxsPSIjZjNlYWQzIiBzdHJva2U9IiNjNzlhNTQiIHN0cm9rZS13aWR0aD0iMS42Ii8+PC9zdmc+') no-repeat center / contain;
+}
+.below .sections .section-card .icon-wrap svg,
+.below .sections .section-card .icon-wrap img { transform: scale(0.72); }
+.below .sections .section-card h2 { color: var(--accent); }
+@media (max-width: 560px){ .below .sections { flex-direction: column; } }
+
+/* Liste d'articles : petites cartes vivantes + ornement doré */
+.below .articles::before {
+  content:"\25C6 \25C6 \25C6"; display:block; text-align:center;
+  color: var(--gold); font-size: 11px; letter-spacing: 8px; margin: 2px 0 18px;
+}
+.below .articles { gap: 12px; }
+.below .article-row {
+  border-bottom: none; background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(199,154,84,0.35); border-left: 4px solid var(--bg);
+  border-radius: 4px; padding: 14px 16px;
+  box-shadow: 0 3px 10px rgba(42,32,24,0.05);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.below .article-row:hover {
+  transform: translateX(3px); background: #fffdf7;
+  box-shadow: 0 8px 20px rgba(42,32,24,0.12);
+}
+.below .article-row .art-title { font-size: 19px; }
