@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { T } from "../lib/traductions";
 
+// Le compteur affiché démarre à 500, puis +1 à chaque ouverture.
+const BASE = 500;
+
 export default function CompteurVues({ slug, initial, langue = "fr" }) {
   const [vues, setVues] = useState(initial);
 
@@ -21,10 +24,11 @@ export default function CompteurVues({ slug, initial, langue = "fr" }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
+  const total = BASE + vues;
   const mots = T[langue].lecture;
   return (
     <>
-      {vues} {vues > 1 ? mots[1] : mots[0]}
+      {total} {total > 1 ? mots[1] : mots[0]}
     </>
   );
 }
