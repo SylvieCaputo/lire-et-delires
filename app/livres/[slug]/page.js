@@ -43,6 +43,11 @@ export default async function Article({ params }) {
         ))}
       </div>
 
+      {article.image2 && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={article.image2} alt={titre} className="article-image" />
+      )}
+
       <SignatureArticle langue={langue} />
 
       <Link href="/livres" className="back-link">
