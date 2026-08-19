@@ -7,6 +7,10 @@ export const dynamic = "force-static";
 
 const SITE = "https://sous-la-couverture.vercel.app";
 
+function sansLiens(s) {
+  return String(s).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+}
+
 function esc(s) {
   return String(s)
     .replace(/&/g, "&amp;")
@@ -22,7 +26,7 @@ export async function GET() {
       const titre = champ(a.titre, "fr");
       const lien = `${SITE}/${a.rubrique}/${a.slug}`;
       const html = champ(a.contenu, "fr")
-        .map((p) => `<p>${esc(p)}</p>`)
+        .map((p) => `<p>${esc(sansLiens(p))}</p>`)
         .join("\n");
       const resume = esc(champ(a.extrait, "fr"));
       const date = new Date(a.date).toUTCString();

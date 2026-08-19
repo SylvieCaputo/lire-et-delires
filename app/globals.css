@@ -602,3 +602,12 @@ body {
   .lang-switcher { margin-left: 0; }
   .lang-btn { padding: 4px 9px; }
 }
+
+/* Liens dans le corps des articles */
+.article-body a {
+  color: var(--bg);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color .15s ease;
+}
+.article-body a:hover { color: var(--gold); }

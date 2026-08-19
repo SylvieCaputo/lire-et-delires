@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleParSlug, champ } from "../../../lib/contenu";
-import { avecItalique } from "../../../lib/titre";
+import { avecItalique, texteAvecLiens } from "../../../lib/titre";
 import { lireVues } from "../../../lib/vues";
 import { T } from "../../../lib/traductions";
 import { getLangue } from "../../../lib/langueServeur";
@@ -39,7 +39,7 @@ export default async function Article({ params }) {
 
       <div className="article-body">
         {champ(article.contenu, langue).map((paragraphe, i) => (
-          <p key={i}>{paragraphe}</p>
+          <p key={i}>{texteAvecLiens(paragraphe)}</p>
         ))}
       </div>
 
