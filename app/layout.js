@@ -5,9 +5,20 @@ import { getLangue } from "../lib/langueServeur";
 import LangSwitcher from "../components/LangSwitcher";
 
 export const metadata = {
+  metadataBase: new URL("https://souslacouverture.com"),
   title: "Sous la couverture",
   description:
-    "Présentations d'ouvrages, essais et articles de réflexion sur la pédagogie et l'actualité intellectuelle.",
+    "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Sous la couverture",
+    description:
+      "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.",
+    url: "https://souslacouverture.com",
+    siteName: "Sous la couverture",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
