@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Newsletter from "../components/Newsletter";
-import { tousLesArticles, champ } from "../lib/contenu";
+import { articlesParRubrique, champ } from "../lib/contenu";
 import { avecItalique } from "../lib/titre";
 import { T } from "../lib/traductions";
 import { getLangue } from "../lib/langueServeur";
@@ -21,7 +21,11 @@ export const dynamic = "force-dynamic";
 export default function Accueil() {
   const langue = getLangue();
   const tr = T[langue];
-  const derniers = tousLesArticles().slice(0, 3);
+  // Un seul article par rubrique sur la page d'accueil :
+  // le plus recent de chaque rubrique, dans l'ordre des cartes ci-dessus.
+  const derniers = ["livres", "reflexion", "aparte"]
+    .map((rubrique) => articlesParRubrique(rubrique)[0])
+    .filter(Boolean);
 
   return (
     <>
