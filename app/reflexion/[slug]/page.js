@@ -21,6 +21,7 @@ export function generateMetadata({ params }) {
   return {
     title: `${titre} — Sous la couverture`,
     description: extrait,
+    authors: [{ name: "Sylvie Caputo" }],
     alternates: { canonical: url },
     openGraph: {
       title: titre,
@@ -29,6 +30,7 @@ export function generateMetadata({ params }) {
       siteName: "Sous la couverture",
       type: "article",
       publishedTime: article.date,
+      authors: ["Sylvie Caputo"],
       images: article.image ? [{ url: article.image }] : undefined,
     },
     twitter: {
