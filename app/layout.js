@@ -4,17 +4,16 @@ import { T } from "../lib/traductions";
 import { getLangue } from "../lib/langueServeur";
 import LangSwitcher from "../components/LangSwitcher";
 
+const DESCRIPTION =
+  "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.";
+
 export const metadata = {
-  metadataBase: new URL("https://souslacouverture.com"),
+  metadataBase: new URL("https://www.souslacouverture.com"),
   title: "Sous la couverture",
-  description:
-    "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.",
-  alternates: { canonical: "/" },
+  description: DESCRIPTION,
   openGraph: {
     title: "Sous la couverture",
-    description:
-      "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.",
-    url: "https://souslacouverture.com",
+    description: DESCRIPTION,
     siteName: "Sous la couverture",
     locale: "fr_FR",
     type: "website",
@@ -56,7 +55,7 @@ export default function RootLayout({ children }) {
         </nav>
         {children}
         <footer className="footer">
-          <a
+          
             className="contact-link"
             href={`mailto:souslacouverture@yahoo.com?subject=${encodeURIComponent(
               "Contact — " + tr.nomSite
