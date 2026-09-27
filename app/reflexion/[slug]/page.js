@@ -10,6 +10,36 @@ import SignatureArticle from "../../../components/SignatureArticle";
 
 export const dynamic = "force-dynamic";
 
+export function generateMetadata({ params }) {
+  const article = articleParSlug(params.slug);
+  if (!article || article.rubrique !== "reflexion") return {};
+
+  const titre = champ(article.titre, "fr");
+  const extrait = champ(article.extrait, "fr");
+  const url = `/reflexion/${article.slug}`;
+
+  return {
+    title: `${titre} — Sous la couverture`,
+    description: extrait,
+    alternates: { canonical: url },
+    openGraph: {
+      title: titre,
+      description: extrait,
+      url,
+      siteName: "Sous la couverture",
+      type: "article",
+      publishedTime: article.date,
+      images: article.image ? [{ url: article.image }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titre,
+      description: extrait,
+      images: article.image ? [article.image] : undefined,
+    },
+  };
+}
+
 export default async function Article({ params }) {
   const article = articleParSlug(params.slug);
   if (!article || article.rubrique !== "reflexion") notFound();
