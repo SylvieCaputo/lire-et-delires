@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
         </nav>
         {children}
         <footer className="footer">
-          
+          <a
             className="contact-link"
             href={`mailto:souslacouverture@yahoo.com?subject=${encodeURIComponent(
               "Contact — " + tr.nomSite
