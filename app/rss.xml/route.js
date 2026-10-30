@@ -3,7 +3,9 @@ import { tousLesArticles, champ } from "../../lib/contenu";
 // Flux RSS du site, en français (langue de la newsletter).
 // Buttondown lira ce flux pour envoyer un e-mail à chaque nouvelle publication
 // et pour composer le récapitulatif mensuel.
-export const dynamic = "force-static";
+// Recalculé à chaque lecture, pour que les articles programmés
+// apparaissent dans le flux à leur date de publication.
+export const dynamic = "force-dynamic";
 
 const SITE = "https://sous-la-couverture.vercel.app";
 
