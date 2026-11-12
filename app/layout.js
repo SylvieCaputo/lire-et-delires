@@ -37,9 +37,9 @@ const DISCRETION = {
 
 // Bouton LinkedIn du pied de page (simple lien, aucun script LinkedIn).
 const LINKEDIN = {
-  fr: { libelle: "Suivez-nous sur LinkedIn", aria: "Sous la couverture sur LinkedIn" },
-  en: { libelle: "Follow us on LinkedIn", aria: "Under the cover on LinkedIn" },
-  it: { libelle: "Seguiteci su LinkedIn", aria: "Sotto la copertina su LinkedIn" },
+  fr: { libelle: "Prolongeons l'aventure sur LinkedIn", aria: "Sous la couverture sur LinkedIn" },
+  en: { libelle: "Let's continue the adventure on LinkedIn", aria: "Under the cover on LinkedIn" },
+  it: { libelle: "Continuiamo l'avventura su LinkedIn", aria: "Sotto la copertina su LinkedIn" },
 };
 
 const DESCRIPTION =
