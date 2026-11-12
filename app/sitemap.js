@@ -12,6 +12,7 @@ export default function sitemap() {
     { url: `${BASE}/livres`, priority: 0.8 },
     { url: `${BASE}/reflexion`, priority: 0.8 },
     { url: `${BASE}/aparte`, priority: 0.8 },
+    { url: `${BASE}/discretion`, priority: 0.3 },
   ].map((p) => ({ ...p, lastModified: maintenant, changeFrequency: "weekly" }));
 
   const pagesArticles = tousLesArticles().map((a) => ({
