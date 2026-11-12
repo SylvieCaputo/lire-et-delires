@@ -28,6 +28,13 @@ const ptSerif = PT_Serif({
   variable: "--font-ptserif",
 });
 
+// Libellé du lien vers la page légale, dans le pied de page.
+const DISCRETION = {
+  fr: "Discrétion assurée",
+  en: "Discretion assured",
+  it: "Discrezione garantita",
+};
+
 const DESCRIPTION =
   "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.";
 
@@ -89,6 +96,13 @@ export default function RootLayout({ children }) {
             </svg>
             {tr.contact}
           </a>
+          <Link
+            href="/discretion"
+            className="contact-link"
+            style={{ marginLeft: 22 }}
+          >
+            {DISCRETION[langue] || DISCRETION.fr}
+          </Link>
           <p className="footer-signature">
             {tr.nomSite} — {tr.signaturePied}
           </p>
