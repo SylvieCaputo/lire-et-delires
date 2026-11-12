@@ -35,6 +35,13 @@ const DISCRETION = {
   it: "Discrezione garantita",
 };
 
+// Bouton LinkedIn du pied de page (simple lien, aucun script LinkedIn).
+const LINKEDIN = {
+  fr: { libelle: "Suivez-nous sur LinkedIn", aria: "Sous la couverture sur LinkedIn" },
+  en: { libelle: "Follow us on LinkedIn", aria: "Under the cover on LinkedIn" },
+  it: { libelle: "Seguiteci su LinkedIn", aria: "Sotto la copertina su LinkedIn" },
+};
+
 const DESCRIPTION =
   "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.";
 
@@ -54,6 +61,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const langue = getLangue();
   const tr = T[langue];
+  const li = LINKEDIN[langue] || LINKEDIN.fr;
 
   return (
     <html
@@ -103,6 +111,21 @@ export default function RootLayout({ children }) {
           >
             {DISCRETION[langue] || DISCRETION.fr}
           </Link>
+          <a
+            className="btn-linkedin"
+            href="https://www.linkedin.com/company/sous-la-couverture"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={li.aria}
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"
+              />
+            </svg>
+            {li.libelle}
+          </a>
           <p className="footer-signature">
             {tr.nomSite} — {tr.signaturePied}
           </p>
