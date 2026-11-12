@@ -16,9 +16,8 @@ const TEXTES = {
       {
         intertitre: "L'éditrice",
         texte: [
-          "« ",
           { em: "Sous la couverture" },
-          " » est une revue littéraire en ligne, personnelle et non commerciale, éditée par Sylvie Caputo, à Lausanne (Suisse). Pour toute question : ",
+          " est une revue littéraire en ligne, personnelle et non commerciale, éditée par Sylvie Caputo, à Lausanne (Suisse). Pour toute question : ",
           MAIL,
         ],
       },
@@ -46,9 +45,8 @@ const TEXTES = {
       {
         intertitre: "The editor",
         texte: [
-          "“",
           { em: "Under the cover" },
-          "” is a personal, non-commercial online literary review, edited by Sylvie Caputo in Lausanne, Switzerland. For any questions: ",
+          " is a personal, non-commercial online literary review, edited by Sylvie Caputo in Lausanne, Switzerland. For any questions: ",
           MAIL,
         ],
       },
@@ -76,9 +74,8 @@ const TEXTES = {
       {
         intertitre: "L'editrice",
         texte: [
-          "« ",
           { em: "Sotto la copertina" },
-          " » è una rivista letteraria online, personale e senza scopo commerciale, curata da Sylvie Caputo a Losanna (Svizzera). Per qualsiasi domanda: ",
+          " è una rivista letteraria online, personale e senza scopo commerciale, curata da Sylvie Caputo a Losanna (Svizzera). Per qualsiasi domanda: ",
           MAIL,
         ],
       },
