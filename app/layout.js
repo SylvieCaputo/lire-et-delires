@@ -3,6 +3,30 @@ import Link from "next/link";
 import { T } from "../lib/traductions";
 import { getLangue } from "../lib/langueServeur";
 import LangSwitcher from "../components/LangSwitcher";
+import { Bodoni_Moda, Archivo_Narrow, PT_Serif } from "next/font/google";
+
+// Polices hébergées par le site lui-même (next/font) : aucun appel
+// aux serveurs de Google depuis le navigateur des visiteurs.
+const bodoni = Bodoni_Moda({
+  subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  display: "swap",
+  variable: "--font-bodoni",
+});
+const archivo = Archivo_Narrow({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600"],
+  display: "swap",
+  variable: "--font-archivo",
+});
+const ptSerif = PT_Serif({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-ptserif",
+});
 
 const DESCRIPTION =
   "Revue littéraire trilingue : présentations d'ouvrages, réflexions et coups de cœur, en français, anglais et italien.";
@@ -25,13 +49,11 @@ export default function RootLayout({ children }) {
   const tr = T[langue];
 
   return (
-    <html lang={langue}>
+    <html
+      lang={langue}
+      className={`${bodoni.variable} ${archivo.variable} ${ptSerif.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Archivo+Narrow:wght@500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
         <link
           rel="alternate"
           type="application/rss+xml"
