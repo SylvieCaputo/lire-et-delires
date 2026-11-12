@@ -615,13 +615,14 @@ body {
 /* Pied de page : les deux liens (contact et Discrétion assurée) alignés */
 .footer .contact-link { vertical-align: middle; }
 
-/* Bouton LinkedIn (pied de page) : simple lien, aucun script LinkedIn */
+/* Bouton LinkedIn (pied de page) : simple lien, aucun script LinkedIn,
+   centré sur sa propre ligne sous les deux liens */
 .btn-linkedin {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 8px;
-  margin-left: 22px;
-  vertical-align: middle;
+  margin: 14px auto 0;
   padding: 8px 16px;
   background: #0A66C2;
   color: #fff;
@@ -639,11 +640,4 @@ body {
 }
 .btn-linkedin svg {
   flex-shrink: 0;
-}
-@media (max-width: 560px) {
-  .btn-linkedin {
-    display: flex;
-    width: fit-content;
-    margin: 14px auto 0;
-  }
 }
