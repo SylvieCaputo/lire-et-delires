@@ -16,7 +16,7 @@ body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
-  font-family: "PT Serif", serif;
+  font-family: var(--font-ptserif, "PT Serif"), "PT Serif", serif;
 }
 
 a {
@@ -41,7 +41,7 @@ a {
   align-items: center;
 }
 .nav-brand {
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-weight: 700;
   font-style: italic;
   font-size: 18px;
@@ -53,7 +53,7 @@ a {
   gap: 20px;
 }
 .nav-links a {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-weight: 600;
   letter-spacing: 0.08em;
   font-size: 12px;
@@ -173,7 +173,7 @@ a {
 }
 h1.masthead {
   text-align: center;
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-weight: 700;
   font-size: clamp(36px, 11.5vw, 74px);
   letter-spacing: 0.005em;
@@ -184,7 +184,7 @@ h1.masthead {
 }
 .masthead-sub {
   text-align: center;
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-style: italic;
   font-weight: 500;
   font-size: 16px;
@@ -226,7 +226,7 @@ h1.masthead {
 }
 .cover-poeme {
   text-align: center;
-  font-family: "PT Serif", serif;
+  font-family: var(--font-ptserif, "PT Serif"), "PT Serif", serif;
   font-style: italic;
   font-size: 15.5px;
   line-height: 1.7;
@@ -262,7 +262,7 @@ h1.masthead {
 }
 
 .page-title {
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-weight: 700;
   font-style: italic;
   font-size: 34px;
@@ -313,7 +313,7 @@ h1.masthead {
   margin-bottom: 10px;
 }
 .section-card h2 {
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-weight: 700;
   font-style: italic;
   font-size: 19px;
@@ -350,13 +350,13 @@ h1.masthead {
   align-items: center;
 }
 .article-row .art-title {
-  font-family: "PT Serif", serif;
+  font-family: var(--font-ptserif, "PT Serif"), "PT Serif", serif;
   font-size: 18px;
   color: var(--ink);
   flex: 1;
 }
 .article-row .views {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 12px;
   color: var(--ink);
   opacity: 0.6;
@@ -369,7 +369,7 @@ h1.masthead {
   text-align: center;
 }
 .newsletter h3 {
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-style: italic;
   font-weight: 700;
   font-size: 22px;
@@ -377,7 +377,7 @@ h1.masthead {
   margin: 0 0 4px;
 }
 .newsletter p.newsletter-sub {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -398,7 +398,7 @@ h1.masthead {
   flex-wrap: wrap;
 }
 .newsletter input[type="email"] {
-  font-family: "PT Serif", serif;
+  font-family: var(--font-ptserif, "PT Serif"), "PT Serif", serif;
   padding: 10px 14px;
   border: none;
   background: var(--cream);
@@ -406,7 +406,7 @@ h1.masthead {
   font-size: 14px;
 }
 .newsletter button {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -420,7 +420,7 @@ h1.masthead {
 
 /* Page article */
 .article-tag {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 12px;
   letter-spacing: 0.14em;
   color: var(--bg);
@@ -428,7 +428,7 @@ h1.masthead {
   text-transform: uppercase;
 }
 .article-title {
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-weight: 700;
   font-style: italic;
   font-size: 32px;
@@ -436,7 +436,7 @@ h1.masthead {
   line-height: 1.15;
 }
 .article-meta {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 12px;
   opacity: 0.6;
   margin-bottom: 28px;
@@ -455,7 +455,7 @@ h1.masthead {
   margin: 0 0 20px;
 }
 .signature-article {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--ink);
@@ -465,7 +465,7 @@ h1.masthead {
 .back-link {
   display: inline-block;
   margin-top: 36px;
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -483,7 +483,7 @@ h1.masthead {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: "Bodoni Moda", serif;
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
   font-style: italic;
   font-size: 15px;
   color: var(--cream-dore);
@@ -497,7 +497,7 @@ h1.masthead {
   flex-shrink: 0;
 }
 .footer-signature {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 10px;
   letter-spacing: 0.2em;
   color: var(--gold);
@@ -515,7 +515,7 @@ h1.masthead {
   background: none;
   border: none;
   color: var(--cream);
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
