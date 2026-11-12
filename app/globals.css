@@ -614,3 +614,36 @@ body {
 
 /* Pied de page : les deux liens (contact et Discrétion assurée) alignés */
 .footer .contact-link { vertical-align: middle; }
+
+/* Bouton LinkedIn (pied de page) : simple lien, aucun script LinkedIn */
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 22px;
+  vertical-align: middle;
+  padding: 8px 16px;
+  background: #0A66C2;
+  color: #fff;
+  border-radius: 4px;
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background .15s ease;
+}
+.btn-linkedin:hover,
+.btn-linkedin:focus-visible {
+  background: #004182;
+}
+.btn-linkedin svg {
+  flex-shrink: 0;
+}
+@media (max-width: 560px) {
+  .btn-linkedin {
+    display: flex;
+    width: fit-content;
+    margin: 14px auto 0;
+  }
+}
