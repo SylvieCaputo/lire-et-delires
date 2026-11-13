@@ -80,6 +80,10 @@ export default async function Article({ params }) {
         <img src={article.image2} alt={titre} className="article-image" />
       )}
 
+      {article.image2 && article.legende2 && (
+        <p className="article-legende">{champ(article.legende2, langue)}</p>
+      )}
+
       <SignatureArticle langue={langue} />
 
       <Link href="/livres" className="back-link">
