@@ -10,7 +10,9 @@ export const dynamic = "force-dynamic";
 const SITE = "https://sous-la-couverture.vercel.app";
 
 function sansLiens(s) {
-  return String(s).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+  return String(s)
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1");
 }
 
 function esc(s) {
