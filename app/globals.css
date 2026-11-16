@@ -735,3 +735,25 @@ body {
   padding-top: 72px;
   padding-bottom: 96px;
 }
+
+/* Newsletter : message affiché après l'inscription */
+.newsletter form[hidden] {
+  display: none;
+}
+.newsletter p.newsletter-merci {
+  font-family: var(--font-ptserif, "PT Serif"), "PT Serif", serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 6px auto 0;
+  color: var(--cream);
+  opacity: 1;
+}
+.newsletter p.newsletter-merci strong {
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
+  display: block;
+  font-size: 20px;
+  color: var(--gold);
+  margin: 0 0 2px;
+}
