@@ -652,3 +652,86 @@ body {
   line-height: 1.5;
   opacity: 0.75;
 }
+
+/* Fin d'article : partage, « à lire aussi » et newsletter */
+.fin-article {
+  margin-top: 40px;
+}
+.partage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 0;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  margin-bottom: 34px;
+}
+.partage-titre {
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--bg);
+  margin-right: 8px;
+}
+.partage-btn {
+  font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  padding: 13px 14px;
+  border: 1px solid var(--bg);
+  background: transparent;
+  color: var(--bg);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.partage-btn:hover {
+  background: var(--bg);
+  color: var(--cream);
+}
+/* Le menu de partage du téléphone n'est proposé que sur petit écran */
+.partage-natif {
+  display: none;
+}
+.fin-titre {
+  font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+.fin-article .articles::before {
+  display: none;
+}
+.fin-article .articles {
+  margin-bottom: 34px;
+}
+@media (max-width: 560px) {
+  .partage {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+  .partage-titre {
+    grid-column: 1 / -1;
+    margin: 0 0 2px;
+    text-align: center;
+  }
+  .partage-btn {
+    grid-column: span 2;
+    padding: 13px 4px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .partage-btn.partage-natif {
+    grid-column: span 4;
+    display: block;
+  }
+}
