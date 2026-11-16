@@ -7,6 +7,7 @@ import { T } from "../../../lib/traductions";
 import { getLangue } from "../../../lib/langueServeur";
 import CompteurVues from "../../../components/CompteurVues";
 import SignatureArticle from "../../../components/SignatureArticle";
+import FinArticle from "../../../components/FinArticle";
 
 export const dynamic = "force-dynamic";
 
@@ -85,6 +86,8 @@ export default async function Article({ params }) {
       )}
 
       <SignatureArticle langue={langue} />
+
+      <FinArticle article={article} langue={langue} />
 
       <Link href="/livres" className="back-link">
         {tr.retour} {tr.rubriques.livres.titre}
