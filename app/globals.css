@@ -657,11 +657,12 @@ body {
 .fin-article {
   margin-top: 40px;
 }
+/* Boutons « À ébruiter » : même présentation sur ordinateur et téléphone
+   (titre centré, puis les boutons sur deux lignes) */
 .partage {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
   padding: 16px 0;
   border-top: 1px solid var(--gold);
   border-bottom: 1px solid var(--gold);
@@ -673,15 +674,20 @@ body {
   font-weight: 700;
   font-size: 18px;
   color: var(--bg);
-  margin-right: 8px;
+  grid-column: 1 / -1;
+  margin: 0 0 2px;
+  text-align: center;
 }
 .partage-btn {
+  grid-column: span 2;
   font-family: var(--font-archivo, "Archivo Narrow"), "Archivo Narrow", sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
   line-height: 1;
   padding: 13px 14px;
   border: 1px solid var(--bg);
@@ -694,9 +700,13 @@ body {
   background: var(--bg);
   color: var(--cream);
 }
-/* Le menu de partage du téléphone n'est proposé que sur petit écran */
-.partage-natif {
-  display: none;
+/* « Partagez où vous voulez… » occupe le reste de la 2e ligne */
+.partage-btn.partage-natif {
+  grid-column: span 4;
+}
+/* Navigateur sans menu de partage : « Copier le lien » prend toute la ligne */
+.partage > .partage-btn:last-child:nth-child(5) {
+  grid-column: 1 / -1;
 }
 .fin-titre {
   font-family: var(--font-bodoni, "Bodoni Moda"), "Bodoni Moda", serif;
@@ -712,27 +722,10 @@ body {
   margin-bottom: 34px;
 }
 @media (max-width: 560px) {
-  .partage {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
-  }
-  .partage-titre {
-    grid-column: 1 / -1;
-    margin: 0 0 2px;
-    text-align: center;
-  }
   .partage-btn {
-    grid-column: span 2;
     padding: 13px 4px;
     font-size: 11px;
     letter-spacing: 0.06em;
-    white-space: nowrap;
-    text-align: center;
-  }
-  .partage-btn.partage-natif {
-    grid-column: span 4;
-    display: block;
   }
 }
 
