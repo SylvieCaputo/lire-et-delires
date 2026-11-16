@@ -735,3 +735,10 @@ body {
     display: block;
   }
 }
+
+/* Page introuvable (erreur 404) */
+.introuvable {
+  text-align: center;
+  padding-top: 72px;
+  padding-bottom: 96px;
+}
