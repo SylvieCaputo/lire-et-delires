@@ -10,19 +10,19 @@ const TEXTES = {
     etiquette: "Votre adresse e-mail",
     merci: "Merci !",
     suite:
-      "Un e-mail de confirmation vous attend dans votre boîte : un clic, et le billet doux est à vous.",
+      "Un e-mail de confirmation vous attend dans votre boîte : un clic, et le billet doux est à vous. Pensez à regarder dans vos spams.",
   },
   en: {
     etiquette: "Your e-mail address",
     merci: "Thank you!",
     suite:
-      "A confirmation e-mail is waiting in your inbox: one click, and the tender note is yours.",
+      "A confirmation e-mail is waiting in your inbox: one click, and the tender note is yours. Do check your spam folder.",
   },
   it: {
     etiquette: "Il vostro indirizzo e-mail",
     merci: "Grazie!",
     suite:
-      "Un'e-mail di conferma vi aspetta nella vostra casella: un clic, e il biglietto galante è vostro.",
+      "Un'e-mail di conferma vi aspetta nella vostra casella: un clic, e il biglietto galante è vostro. Date un'occhiata anche nella cartella spam.",
   },
 };
 
